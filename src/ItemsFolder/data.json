@@ -1,0 +1,51 @@
+
+[
+    {
+        "name": "Authentic",
+        "img": "./Authentic.webp",
+        "price": 60.00,
+        "id": "s1"
+    },
+    {
+        "name": "Canvas Old Skool",
+        "img": "./CanvasOldSkool.webp",
+        "price": 70.00,
+        "id": "s2"
+    },
+    {
+        "name": "Checkerboard Slip-On",
+        "img": "./CheckerboardSlipOn.webp",
+        "price": 65.00,
+        "id": "s3"
+    },
+    {
+        "name": "Era 59",
+        "img": "./Era59.webp",
+        "price": 65.00,
+        "id": "s4"
+    },
+    {
+        "name": "Era",
+        "img": "./Era.webp",
+        "price": 70.00,
+        "id": "s5"
+    },
+    {
+        "name": "Old Skool",
+        "img": "./OldSkool.webp",
+        "price": 70.00,
+        "id": "s6"
+    },
+    {
+        "name": "Sk8-Hi",
+        "img": "./Sk8-Hi.webp",
+        "price": 65.00,
+        "id": "s7"
+    },
+    {
+        "name": "UltraRange EXO",
+        "img": "./UltraRangeEXO.webp",
+        "price": 100.00,
+        "id": "s8"
+    }
+ ]
