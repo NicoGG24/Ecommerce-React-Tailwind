@@ -1,16 +1,21 @@
-import { ClassNames } from '@emotion/react';
 import './App.css';
 import Header from "./Components/Header"
-import Item from './Components/Item';
-import ItemCount from './Components/ItemCount';
 import Main from "./Components/Main"
+import Footer from './Components/Footer';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom"
 
 
 function App() {
   return (
+
     <>
       <Header />
       <Main />
+      <Footer />
     </>  
   );
 }

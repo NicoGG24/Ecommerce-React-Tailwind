@@ -4,7 +4,7 @@ import ItemListContainer from "./ItemListContainer";
 const Main = () => {
     return(
         <main className="flex flex-col">
-            <ItemListContainer greeting="Category" />
+            <ItemListContainer greeting="Shoes" />
         </main>
     );
 };
