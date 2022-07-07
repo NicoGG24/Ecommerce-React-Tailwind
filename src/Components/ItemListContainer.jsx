@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
+import ItemDivContainer from "./ItemDivContainer";
 import ItemList from "./ItemList";
 
-
-
 const productsShoes = [
-    {name: "Authentic", img: "https://images.vans.com/is/image/Vans/VN000EE3W00-HERO?$PLP-IMAGE$", price: 60.00, id: "s1"},
+    {name: "Authentic", img: "https://images.vans.com/is/image/Vans/VN000EE3W00-HERO?$PLP-IMAGE$", price: 60.00, description:"First known as the Vans #36, the Old Skool debuted in 1977 with a unique new addition: a random doodle drawn by founder Paul Van Doren, and originally referred to as the “jazz stripe.” Today, the famous Vans Sidestripe has become the unmistakable—and instantly recognizable—hallmark of the Vans brand. Constructed with durable canvas and synthetic uppers in a range of fresh colorways, the Old Skool pays homage to our heritage while ensuring that this low top, lace-up shoe remains as iconic as ever. It also features re-enforced toe caps, supportive padded collars, and signature rubber waffle outsoles.", id: "s1"},
     {name: "Canvas Old Skool", img: "https://images.vans.com/is/image/Vans/VN000D3HBKA-HERO?hei=494&wid=492&qlt=85", price: 70.00, id: "s2"},
     {name: "Checkerboard Slip-On", img: "https://images.vans.com/is/image/Vans/VN000EYEBWW-HERO?$PLP-IMAGE$", price: 65.00, id: "s3"},
     {name: "Era 59", img: "	https://images.vans.com/is/image/Vans/VN0A34589ME-HERO?hei=494&wid=492&qlt=85", price: 65.00, id: "s4"},
@@ -28,7 +27,7 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
 
-    getProducts();
+        getProducts();
 
     }, []);
 
@@ -40,8 +39,15 @@ const ItemListContainer = (props) => {
             <div className="flex m-24 ml-32">
                 <h1 className="font-bold text-4xl text-gray-700 ">{props.greeting}</h1>
             </div>
-            <div className="  ml-32 mr-32 mb-12 flex flex-wrap">
+            <div className="  ml-32 mr-32 mb-12 flex flex-wrap justify-center">
                 {items.map((it) => <ItemList src={it.img} name={it.name} price={it.price.toFixed(2)} key={it.id}/>)}
+            </div>
+            <div>
+                {items.map((it) => {
+                    if(it.id === "s1"){
+                        return <ItemDivContainer src={it.img} name={it.name} price={it.price.toFixed(2)} key={it.id} description={it.description}/>
+                    }
+                })}
             </div>
         </>
     );

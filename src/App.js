@@ -11,12 +11,11 @@ import {
 
 function App() {
   return (
-
-    <>
+    <BrowserRouter>
       <Header />
       <Main />
       <Footer />
-    </>  
+    </BrowserRouter>  
   );
 }
 
