@@ -5,21 +5,20 @@ const ItemCount = (props) => {
     const [ammount, setAmmount] = useState(1);
 
     const addBtn = () =>{
-        if(ammount < props.stock){
-            setAmmount(ammount + 1);
-            console.log(ammount);
-        }else{
-            alert("Cantidad Invalida")
-        }
+        
+        (ammount <= props.stock - 1) ? setAmmount(prevCount => prevCount + 1) : alert("No hay mas Stock.")
     }
 
     const removeBtn = () =>{
-        if(ammount > 0){
-            setAmmount(ammount - 1);
-            console.log(ammount);
-        }else{
-            alert("Cantidad Invalida")
-        }
+
+        (ammount>0) ? setAmmount(prevCount => prevCount - 1 ) : alert("Cantidad Invalida.")
+
+        // if(ammount > 0){
+        //     setAmmount( prevCount => prevCount - 1);
+        //     console.log(ammount);
+        // }else{
+        //     alert("Cantidad Invalida")
+        // }
     }
 
 

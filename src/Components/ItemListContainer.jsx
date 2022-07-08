@@ -1,4 +1,6 @@
+import { elementTypeAcceptingRef } from "@mui/utils";
 import { useState, useEffect } from "react";
+import Item from "./Item";
 import ItemDivContainer from "./ItemDivContainer";
 import ItemList from "./ItemList";
 
@@ -31,7 +33,17 @@ const ItemListContainer = (props) => {
 
     }, []);
 
+    const getItem = (id) => {
 
+        const product = items.find((item) => {
+        return item.id === id
+        });
+
+        return <ItemDivContainer src={product.img} name={product.name} price={product.price} description={product.description}/>
+    };
+    
+
+    
 
 
     return(
@@ -43,16 +55,15 @@ const ItemListContainer = (props) => {
                 {items.map((it) => <ItemList src={it.img} name={it.name} price={it.price.toFixed(2)} key={it.id}/>)}
             </div>
             <div>
-                {items.map((it) => {
-                    if(it.id === "s1"){
-                        return <ItemDivContainer src={it.img} name={it.name} price={it.price.toFixed(2)} key={it.id} description={it.description}/>
-                    }
-                })}
+                {getItem("s1")}
             </div>
         </>
     );
 };
-// NO RENDERIZA LAS IMAGENES
 
-
+                // {items.map((it) => {
+                //     if(it.id === "s1"){
+                //     return <ItemDivContainer src={it.img} name={it.name} price={it.price.toFixed(2)} key={it.id} description={it.description}/>
+                //     }
+                // })}
 export default ItemListContainer;
